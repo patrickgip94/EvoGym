@@ -22,7 +22,7 @@ export default {
         "mobile-home": "url('./assets/HomePageGraphic.png')"
       }),
       fontFamily: {
-        dmsans: ["DM sans", 'sans-serif'],
+        dmsans: ["DM Sans", 'sans-serif'],
         montserrat: ["Montserrat", "sans-serif"],
       },
       content: {
