@@ -13,13 +13,16 @@ type Props = {
   setSelectedPage: (value: SelectedPage) => void;
 };
 
-function Home({ setSelectedPage }: Props) {
+const Home = ({ setSelectedPage }: Props) => {
   const isAboveMediumScreen = useMediaQuery("(min-width: 1060px)");
 
   return (
     <section id="home" className="gap-16 bg-gray-20 py-10 md:h-full md:pb-0">
       {/* IMAGE & MAIN HEADER*/}
-      <div className="mx-auto w-5/6 items-center justify-center md:flex md:h-5/6 ">
+      <motion.div
+        className="mx-auto w-5/6 items-center justify-center md:flex md:h-5/6 "
+        onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
+      >
         {/* MAIN HEADER */}
         <div className="z-10 mt-32 md:basis-3/5 ">
           {/* HEADINGS */}
@@ -85,7 +88,7 @@ function Home({ setSelectedPage }: Props) {
         >
           <img alt="home-pagegraphic" src={HomePageGraphic} />
         </div>
-      </div>
+      </motion.div>
 
       {/* SPONSORS */}
       {isAboveMediumScreen && (
@@ -101,6 +104,6 @@ function Home({ setSelectedPage }: Props) {
       )}
     </section>
   );
-}
+};
 
 export default Home;
