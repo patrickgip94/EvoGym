@@ -1,4 +1,5 @@
 import Logo from "@/assets/Logo.png";
+import { BsGithub, BsLinkedin } from "react-icons/bs";
 
 const Footer = () => {
   return (
@@ -16,7 +17,22 @@ const Footer = () => {
           </p>
           <p>© Evogym All Rights Reserved.</p>
         </div>
-        <div></div>
+
+        <div className="mt-16 basis-1/4 md:mt-0">
+          <h1 className="font-bold">Links</h1>
+          <ul className="mt-1">
+            <li className="mb-2">
+              <a href="https://www.linkedin.com/in/patrickgip94/">
+                <BsLinkedin className="h-8 w-8" />
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/patrickgip94/EvoGym">
+                <BsGithub className="h-8 w-8" />
+              </a>
+            </li>
+          </ul>
+        </div>
         <div></div>
       </div>
     </footer>
